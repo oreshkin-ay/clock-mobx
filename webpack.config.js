@@ -40,14 +40,18 @@ const getPlugins = () => {
 			}
 		}),
 		new CleanWebpackPlugin(),
-		// new CopyWebpackPlugin({
-		// 	patterns: [
-		// 		{
-		// 			from: path.resolve(__dirname, 'assets/favicon.ico'),
-		// 			to: path.resolve(__dirname, 'dist')
-		// 		}
-		// 	]
-		// }),
+		new CopyWebpackPlugin({
+			patterns: [
+				{
+					from: path.resolve(__dirname, 'assets/favicon.ico'),
+					to: path.resolve(__dirname, 'build')
+				},
+				{
+					from:path.resolve(__dirname, 'assets/css.css'),
+					to: path.resolve(__dirname, 'build')
+				}
+			]
+		}),
 		new MiniCSSExtractPlugin({filename: `${getNameMask()}.css` }),
 		new DefinePlugin({ 'process.env.DEV': JSON.stringify(isDev)})
 	];
