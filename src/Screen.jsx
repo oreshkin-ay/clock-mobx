@@ -12,10 +12,10 @@ const Screen = ({ width, height, cWidth, cHeight, children }) => (<svg
 </svg>);
 
 Screen.propTypes = {
-  width: PropTypes.isRequired,
-  height: PropTypes.isRequired,
-  cWidth: PropTypes.isRequired,
-  cHeight: PropTypes.isRequired,
+  width: PropTypes.number.isRequired,
+  height: PropTypes.number.isRequired,
+  cWidth: PropTypes.number.isRequired,
+  cHeight: PropTypes.number.isRequired,
   children: PropTypes.node
 }
 

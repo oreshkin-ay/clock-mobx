@@ -6,7 +6,7 @@ import { CIRCLE_SROKE_WIDTH, SCREEN_PADDING, COLOR } from '../constants';
 
 const ClockFace = ({ size }) => {
   const center = size / 2;
-  const circleRadius = circlePos - CIRCLE_SROKE_WIDTH / 2 - SCREEN_PADDING;
+  const circleRadius = center - CIRCLE_SROKE_WIDTH / 2 - SCREEN_PADDING;
  
   return (
      <g>
