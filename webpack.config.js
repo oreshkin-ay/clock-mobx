@@ -35,6 +35,8 @@ const getPlugins = () => {
 	const plugins = [
 		new HTMLWebpackPlugin({
 			template: path.resolve(__dirname, 'assets/index.html'),
+			favicon: path.resolve(__dirname, 'assets/favicon.ico'),
+			title: 'Clock',
 			minify: {
 				collapseWhitespace: isProd
 			}
@@ -68,6 +70,7 @@ const getPlugins = () => {
 module.exports = {
 	context: path.resolve(__dirname, 'src'),
 	mode,
+	target: 'web',
 	entry: {
 		main: ['@babel/polyfill', './index.jsx']
 	},
@@ -93,8 +96,7 @@ module.exports = {
 				use: [{
 					loader: MiniCSSExtractPlugin.loader,
 					options: {
-						hmr: isDev,
-						reloadAll: true
+						emit: isDev
 					}
 				},
 				'css-loader']
@@ -104,8 +106,7 @@ module.exports = {
 				use: [{
 					loader: MiniCSSExtractPlugin.loader,
 					options: {
-						hmr: isDev,
-						reloadAll: true
+						emit: isDev
 					}
 				},
 				'css-loader',
