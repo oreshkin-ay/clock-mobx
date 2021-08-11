@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { NUMBER_COUNT } from '../constants';
+import { NUMBER_COUNT } from '../../constants';
 import Number from './Number';
 
 const numberIds = Array.from(Array(NUMBER_COUNT).keys());

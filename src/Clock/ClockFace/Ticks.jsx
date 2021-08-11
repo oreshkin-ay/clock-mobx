@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { TICK_COUNT } from '../constants';
+import { TICK_COUNT } from '../../constants';
 import Tick from './Tick';
 
 const tiks = Array.from(Array(TICK_COUNT).keys());

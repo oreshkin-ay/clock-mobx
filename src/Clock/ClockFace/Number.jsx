@@ -6,8 +6,8 @@ import {
   NUMBER_COUNT,
   NUMBER_SIZE,
   COLOR
-} from '../constants';
-import { getPoint } from '../utils'; 
+} from '../../constants';
+import { getPoint } from '../../utils'; 
 
 const Number = ({ id, x0, y0, radius, children }) => {
   const { x, y } = useMemo(() => getPoint({ x0, y0, angle: 2 * Math.PI * id / NUMBER_COUNT, r: radius - 5 * STANDARD_TICK_LENGTH }), [x0, y0, id, radius]);

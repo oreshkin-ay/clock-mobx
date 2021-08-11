@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { CIRCLE_SROKE_WIDTH, SCREEN_PADDING, COLOR } from '../constants';
+import { CIRCLE_SROKE_WIDTH, SCREEN_PADDING, COLOR } from '../../constants';
 import Tiks from './Ticks';
 import Numbers from './Numbers';
 

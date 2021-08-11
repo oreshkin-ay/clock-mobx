@@ -6,8 +6,8 @@ import {
   TICK_STROKE_WIDTH,
   TICK_COUNT,
   COLOR
-} from '../constants';
-import { getPoint } from '../utils';
+} from '../../constants';
+import { getPoint } from '../../utils';
 
 
 const Tick = ({id, x0, y0, radius}) => {
