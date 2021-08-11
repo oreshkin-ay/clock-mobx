@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-import { INTERVAL } from '../constants'
+import { INTERVAL, CIRCLE_SROKE_WIDTH, SCREEN_PADDING } from '../constants'
 import ClockFace from './ClockFace';
+import Arrows from './Arrows/';
 
 const Clock = ({ size, date, onDateChange }) => {
   useEffect(() => {
@@ -20,9 +21,13 @@ const Clock = ({ size, date, onDateChange }) => {
       window.requestAnimationFrame(action);
     }, [])
 
+  const center = size / 2;
+  const circleRadius = center - CIRCLE_SROKE_WIDTH / 2 - SCREEN_PADDING;
+
   return (
      <>
-      <ClockFace size={size} />
+      <ClockFace radius={circleRadius} x0={center} y0={center} />
+      <Arrows radius={circleRadius} x0={center} y0={center} date={date} />
     </>
     );
 }

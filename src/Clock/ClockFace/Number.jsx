@@ -14,7 +14,7 @@ const Number = ({ id, x0, y0, radius, children }) => {
 
   return (
     <text x={x} y={y + NUMBER_SIZE / 4} textAnchor="middle" >
-      <tspan fill={COLOR} fontStyle="italic" fontFamily="sans-serif" fontSize={NUMBER_SIZE}>
+      <tspan fill={COLOR} fontStyle="italic" fontFamily="serif" fontSize={NUMBER_SIZE}>
         {children}
       </tspan>
     </text>

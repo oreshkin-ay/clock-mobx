@@ -1,24 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { CIRCLE_SROKE_WIDTH, SCREEN_PADDING, COLOR } from '../../constants';
+import { CIRCLE_SROKE_WIDTH, COLOR } from '../../constants';
 import Tiks from './Ticks';
 import Numbers from './Numbers';
 
 
-const ClockFace = ({ size }) => {
-  const center = size / 2;
-  const circleRadius = center - CIRCLE_SROKE_WIDTH / 2 - SCREEN_PADDING;
+const ClockFace = ({ radius, x0, y0 }) => {
+  
  
   return (
      <g>
-      <circle r={circleRadius} cx={center} cy={center} stroke={COLOR} strokeWidth={CIRCLE_SROKE_WIDTH} fill="none" />
-      <Tiks radius={circleRadius} x0={center} y0={center} />
-      <Numbers radius={circleRadius} x0={center} y0={center} />
+      <circle r={radius} cx={x0} cy={y0} stroke={COLOR} strokeWidth={CIRCLE_SROKE_WIDTH} fill="none" />
+      <Tiks radius={radius} x0={x0} y0={y0} />
+      <Numbers radius={radius} x0={x0} y0={y0} />
     </g>
   );
 }
 
-ClockFace.propTypes = { size: PropTypes.number.isRequired };
+ClockFace.propTypes = {
+  radius: PropTypes.number.isRequired,
+  x0: PropTypes.number.isRequired,
+  y0: PropTypes.number.isRequired
+};
 
 export default ClockFace;
