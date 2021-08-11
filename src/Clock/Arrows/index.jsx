@@ -18,7 +18,6 @@ const useAngles = date => {
 
   const millisecondsPerMinute = SECONDS_PER_MINUTE * MILLISECONDS_PER_SECOND;
   const millisecondsPerHour = MINUTE_PER_HOUR * millisecondsPerMinute;
-  const millisecondsPerCircle = HOUR_PER_CIRCLE * millisecondsPerHour;
 
   const seconds = (timestamp % millisecondsPerMinute) / MILLISECONDS_PER_SECOND;
   const minutes = (timestamp % millisecondsPerHour) / millisecondsPerMinute;
