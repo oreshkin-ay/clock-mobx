@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { SECOND_ARROW_INDEX, SECOND_ARROW_WIDTH } from '../../constants';
 import Arrow from './Arrow';
 
-const SecondArrow = ({radius, ...props}) => <Arrow {...props} length={SECOND_ARROW_INDEX * radius} width={SECOND_ARROW_WIDTH} />
+const SecondArrow = ({radius, ...props}) => <Arrow {...props} length={SECOND_ARROW_INDEX * radius} width={SECOND_ARROW_WIDTH} />;
 
 SecondArrow.propTypes = {
   radius: PropTypes.number.isRequired,

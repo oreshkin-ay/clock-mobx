@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { MINUTE_ARROW_INDEX, MINUTE_ARROW_WIDTH } from '../../constants';
 import Arrow from './Arrow';
 
-const MinuteArrow = ({radius, ...props}) => <Arrow {...props} length={MINUTE_ARROW_INDEX * radius} width={MINUTE_ARROW_WIDTH} shouldRounded />
+const MinuteArrow = ({radius, ...props}) => <Arrow {...props} length={MINUTE_ARROW_INDEX * radius} width={MINUTE_ARROW_WIDTH} shouldRounded />;
 
 MinuteArrow.propTypes = {
   radius: PropTypes.number.isRequired,
